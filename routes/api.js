@@ -26,7 +26,6 @@ module.exports = function (app) {
         return res.json({ text: text, translation: translatedText });
       }
       const translation = translator.highlight(translatedText, highlightWords);
-      console.log(highlightWords)
       res.json({ text: text, translation: translation });
     });
 };
