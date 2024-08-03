@@ -2,44 +2,47 @@
 <html>
 
 <head>
-	<title>American/British English Translator</title>
-	<meta name="description" content="An example for the fCC QA American/British English Translator project" />
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon">
-	<link rel="stylesheet" href="../public/style.css" type="text/css" />
+  <title>American/British English Translator</title>
+  <meta name="description" content="An example for the fCC QA American/British English Translator project" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link id="favicon" rel="icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon">
+  <link href="../public/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-	<header>
-		<h1>
-			American / British English Translator
-		</h1>
-	</header>
-	<hr style="margin: 25px" />
-	<div class="container">
-		<div class="form-container">
-			<textarea
-          rows="10"
-          cols="60"
-          id="text-input"
-        ></textarea>
-        <br />
-        <select id="locale-select">
-          <option value="american-to-british">American to British</option>
-          <option value="british-to-american">British to American</option>
-        </select>
-        <input type="button" value="Translate" id="translate-btn"/>
-      </div>
-      <div id="output-container">
-        <div id="solution-container">
-          Translated Sentence:
-          <div id="translated-sentence"></div>
-          <div id="error-msg"></div>
-        </div>
+<body class="bg-gray-100 text-gray-900">
+  <header class="text-center py-6 bg-blue-600 text-white">
+    <h1 class="text-3xl font-bold">
+      American / British English Translator
+    </h1>
+  </header>
+  <hr class="my-6 border-gray-300 " />
+  <div class="container mx-auto p-4 max-w-xl">
+    <div class="form-container bg-white p-6 rounded-lg shadow-lg">
+      <textarea
+        rows="10"
+        cols="60"
+        id="text-input"
+        class="w-full p-2 border border-gray-300 rounded-lg"
+      ></textarea>
+      <br />
+      <select id="locale-select" class="w-full mt-4 p-2 border border-gray-300 rounded-lg">
+        <option value="american-to-british">American to British</option>
+        <option value="british-to-american">British to American</option>
+      </select>
+      <input type="button" value="Translate" id="translate-btn" class="w-full mt-4 p-2 bg-blue-600 text-white rounded-lg cursor-pointer"/>
+    </div>
+    <div id="output-container" class="mt-6">
+      <div id="solution-container" class="bg-white p-6 rounded-lg shadow-lg">
+        <p class="font-bold">Translated Sentence:</p>
+        <div id="translated-sentence" class="mt-2"></div>
+        <div id="error-msg" class="mt-2 text-red-600"></div>
       </div>
     </div>
-  </body>
+  </div>
   <script src="../public/index.js"></script>
+</body>
+
 </html>
